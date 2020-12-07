@@ -1,0 +1,15 @@
+
+.mapContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px;
+    row-gap: 20px;
+}
+
+#map {
+    height: 400px;
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
