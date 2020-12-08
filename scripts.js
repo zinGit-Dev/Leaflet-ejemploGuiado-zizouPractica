@@ -78,7 +78,7 @@ function getCoordinates(placesContent) {
 // Esta función centrará el mapa cuando pulsemos el botón
 function changeMapCenter(searchLocation) {
 
-    fetch(
+   return fetch(
         `${MAPBOX_PLACES_API}${searchLocation}${REST_PLACES_URL}`,
         FETCH_HEADERS
     )
@@ -94,28 +94,15 @@ function changeMapCenter(searchLocation) {
         });
 }
 
-const city = document.getElementById("cityName").value; 
+
+function drawMap(){
+    let city = document.getElementById("cityName").value; 
+    console.log("valor de city=>", city)
+   
+   return city
+
+}
+
+// changeMapCenter(drawMap())
 
 
- console.log("valor de city=>", city)
-
-
-
-//  function getMap(){
-
-//     const city = document.getElementById("cityName").value; 
-
-//     console.log("valor de city=>", city)
-
-//     return changeMapCenter(city) 
-
-//  } 
-
- const showMap = document.getElementById("submitId");
-
- console.log("este es el submitId=>", showMap)
-
-  showMap.addEventListener("Submit",changeMapCenter(city) )
-
-// const formGetCity = document.querySelector("#buttonId")
-//   formGetCity.addEventListener("click", getMap) 

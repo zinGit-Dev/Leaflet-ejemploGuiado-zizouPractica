@@ -15,14 +15,13 @@
     <div class="mapContainer">
         <h2>Map example👀</h2>
         <div id="map"></div>
-        <button onclick="changeMapCenter('cadiz')">Ir a Cádiz</button>
+        <!-- <button onclick="changeMapCenter('cadiz')">Ir a Cádiz</button> -->
         <div>
-            <form id="formId" >
+            <form onsubmit="return false" >
                 <label for="cityName">Introduzca una ciudad 🌍: </label>
-                <input type="text" id="cityName" name="cityName">
-                <input id="submitId"   type="submit" value="Submit">
-                <!-- <br>
-                <button id="buttonId">submit button</button> -->
+                <input type="text" id="cityName"  value=""  name="cityName">
+                <input  type="submit" value="Submit"  onclick="changeMapCenter(drawMap())">
+                
             </form>
         </div>
         
@@ -32,6 +31,8 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
+    <!-- <script src="./scripts.js"></script> -->
+
     <script src="./scripts.js"></script>
 </body>
 
